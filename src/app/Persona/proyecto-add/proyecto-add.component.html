@@ -1,0 +1,25 @@
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Agregar Proyecto</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <label for="">Nombres:</label>
+            <input [(ngModel)]="proyecto.nombre" name="nombre" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Desempenio:</label>
+            <input [(ngModel)]="proyecto.desempenio" name="desempenio" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Url:</label>
+            <input [(ngModel)]="proyecto.url" name="url" type="text" class="form-control">
+          </div>
+          <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
+          <button (click)="Cancel()" class="btn btn-secondary">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,12 @@
+.card{
+    border: solid 3 px black;
+/*     color: blue; */
+    text-align: center;
+    background-color: rgba(42, 42, 151, 0.399);
+/*     background-color: #FFC18E; */
+}
+
+.titulo{
+/*     background-image: url(../../../assets/forest.jpg); */
+    text-align:center;
+}

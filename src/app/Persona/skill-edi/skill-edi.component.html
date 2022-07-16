@@ -1,0 +1,55 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Modificar Skill</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input [(ngModel)]="skill.nombre" name="nombre" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Progress:</label>
+          <input [(ngModel)]="skill.progress" name="progress" type="text" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label for="">Img:</label>
+          <!-- <input [(ngModel)]="skill.img" name="img" type="file" class="form-control"> -->
+          <!-- <input [(ngModel)]="skill.img" name="img" type="file" accept="image/jpg,image/jpeg,image/png,image/webp"
+            alife-file-to-base64 (onFileChanged)="obtener($event)" /> -->
+          <input type="file" accept=".png , .jpg" alife-file-to-base64 (onFileChanged)="obtener($event)" name="img"
+            class="form-control">
+        </div>
+        <button (click)="Actualizar(skill)" class="btn btn-danger">Actualizar</button>
+        <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="card">
+  <div class="card-header">
+    <h3>Agregar skill</h3>
+  </div>
+  <div class="card-body">
+    <form action="">
+
+      <label class="col-sm-3 col-form-label is-required"> nombre </label>
+      <input type="text" name="nombre" id="" class="form-control" placeholder="" aria-describedby="helpId"
+        [(ngModel)]="skill.nombre" name="nombre" value="">
+
+      <label for="customRange1" class="form-label">nivel</label>
+      <input type="text" [(ngModel)]="skill.progress" name="progress" class="form-range" id="customRange1">
+
+      <label for="customRange1" class="form-label">nivel</label>
+      <input type="file" [(ngModel)]="skill.img" name="img" class="form-range"
+        alife-file-to-base64 (onFileChanged)="obtener($event)" id="customRange1">
+
+      <button type="submit" class="btn btn-danger" (click)="actualizar(skill)">Actualizar</button>
+      <button class="btn btn-secondary" [routerLink]="['home']">CANCELAR
+      </button>
+    </form>
+  </div>
+</div> -->

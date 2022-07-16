@@ -1,0 +1,85 @@
+<!-- <div class="container" style="margin-bottom: 20px;">
+    <div class="card">
+        <div class="card-header">
+            <h3>EXPERIENCIAS</h3>
+            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"
+                style="margin-left: 10px;margin-right: 10px;"><i class="far fa-plus-square"
+                    style="justify-content: end;"></i></button>
+            <table class="table table-hover" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>DESEMPENIO</th>
+                        <th>FECHA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let experiencia of experiencias" class="text-center">
+                        <td>{{experiencia.nombre}}</td>
+                        <td>{{experiencia.puesto}}</td>
+                        <td>{{experiencia.fecha}}</td>
+                        <td>
+                            <button *ngIf="isAdmin" (click)="Editar(experiencia)" class="btn editar"
+                                style="margin-right: 15px;"><i class="fas fa-edit"></i></button>
+                             <button (click)="Listar()" class="btn btn-warning">Listar</button> 
+                            <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn borrar"
+                                style="margin-top: 10px;"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+
+    <div class="titulo"><br></div>
+    <h1 style="text-align: center;">
+        Experiencias Laborales
+    </h1>
+    <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"
+                style="margin-left: 10px;margin-right: 10px;"><i class="far fa-plus-square"
+                    style="justify-content: end;"></i></button>
+
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let experiencia of experiencias" class="card">
+                <div class="col-xl-12 col-lg-6 col-sm-12"><h4>{{experiencia.nombre}}</h4></div>
+                <div class="col-xl-12 col-lg-6 col-sm-12"><p>{{experiencia.puesto}}</p></div>
+                <div class="col-xl-12 col-lg-6 col-sm-12"><p>{{experiencia.fecha}}</p></div>
+                <div class="row">
+                    <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(experiencia)" class="btn editar"
+                        style="margin-right: 15px;"><i class="fas fa-edit"></i></button>
+                    <!-- <button (click)="Listar()" class="btn btn-warning">Listar</button> -->
+                    <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn borrar"
+                        style="margin-top: 10px;"><i class="fas fa-trash"></i></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h3>Experiencias</h3>
+                <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-secondary"><i class="far fa-plus-square"></i></button>
+            </div>
+        </div>
+        <span *ngFor="let experiencia of experiencias">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    {{experiencia.nombre}}<br>{{experiencia.puesto}}<br>{{experiencia.fecha}}
+                </div>
+                <div class="col-lg-12">
+                    <button *ngIf="isAdmin" (click)="Editar(experiencia)" class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                     <button (click)="Nuevo()" class="btn btn-warning">Nuevo</button> 
+                     <button (click)="Listar()" class="btn btn-warning">Listar</button> 
+                    <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </span>
+    </div> -->

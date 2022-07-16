@@ -1,0 +1,7 @@
+#logos{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    z-index: 3;
+  }

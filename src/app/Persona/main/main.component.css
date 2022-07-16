@@ -1,0 +1,21 @@
+@media(max-width:800px){
+    #baner{
+        display:none;
+    }
+}
+
+#perfil{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    z-index: 3;
+  }
+
+
+
+  /* .estilo{
+      border: 2px solid brown;
+      margin-top: 11px;   
+      padding-bottom: 11px;
+      font-style: oblique;
+  } */

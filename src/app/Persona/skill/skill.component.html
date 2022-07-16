@@ -1,0 +1,62 @@
+<!-- <div class="container" style="margin-bottom: 20px;">
+    <div class="card">
+        <div class="card-header">
+            <h3>Skills</h3>
+            <table class="table table-hover" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>PROGRESS</th>
+                        <th>IMG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let skill of skills" class="text-center">
+                        <td>{{skill.nombre}}</td>
+                        <td>{{skill.progress}}</td>
+                        <td>{{skill.img}}</td>
+                        <td>
+                            <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100">básico</div>
+                        </td>
+                        <td>
+                            <button (click)="Editar(skill)" class="btn btn-secondary"><i class="fas fa-edit"> Editar</i></button>
+                            <button (click)="Nuevo()" class="btn btn-warning"
+                                style="margin-left: 10px;margin-right: 10px;">Nuevo</button>
+                            <button (click)="Listar()" class="btn btn-warning">Listar</button>
+                            <button (click)="Delete(skill)" class="btn btn-danger" style="margin-top: 10px;"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> -->
+
+
+
+
+
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-lg-12">
+            <h3>Tecnologías</h3>
+            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i
+                    class="far fa-plus-square"></i></button>
+        </div>
+    </div>
+    <div *ngFor="let skill of skills" class="row text-center">
+        <div class="col-lg-12">
+            {{skill.nombre}}<br>
+            <img src="{{skill.img}}" accept="image/*" id="logos" alt="no se selecciono ninguna imagen para mostrar" />
+            <div class="col-sm-12 progress-bar" role="progressbar" attr.style="width:{{skill.progress}}%"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">básico</div>
+        </div>
+        <div class="col-lg-12">
+            <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar" style="margin-right: 15px;"><i class="fas fa-edit"></i></button>
+            <!-- <button (click)="Nuevo()" class="btn btn-warning">Nuevo</button> -->
+            <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn borrar"><i class="fas fa-trash"></i></button>
+            <!-- <button (click)="Listar()" class="btn btn-warning">Listar</button> -->
+        </div>
+    </div>
+</div>
