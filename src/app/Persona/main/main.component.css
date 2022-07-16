@@ -11,6 +11,10 @@
     z-index: 3;
   }
 
+  .container{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
 
 
   /* .estilo{

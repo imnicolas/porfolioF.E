@@ -70,13 +70,13 @@
 </div> -->
 <div class="row my-4">
 
-<div class="col-4 titulo">
-    <h3>P R O Y E C T O S</h3>
-</div>
+    <div class="col-8 titulo">
+        <h3>P R O Y E C T O S</h3>
+    </div>
 
-<div class="col-8 d-flex justify-content-end">
-    <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i class="far fa-plus-square"></i></button>
-</div>
+    <div class="col-4 d-flex justify-content-end">
+        <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i class="far fa-plus-square"></i></button>
+    </div>
 
 </div>
 
@@ -85,21 +85,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mx-2 my-2"*ngFor="let proyecto of proyectos">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mx-2 my-2" *ngFor="let proyecto of proyectos">
             <div class="card">
                 <div class="row">
                     <h4>{{proyecto.nombre}}</h4>
                 </div>
                 <div class="row">
-                    <a href="#">{{proyecto.url}}</a>
+                    <a href="{{proyecto.url}}">{{proyecto.url}}</a>
                 </div>
                 <div class="row">
                     <p>{{proyecto.desempenio}}</p>
                 </div>
                 <div class="row d-flex">
                     <div>
-                        <button *ngIf="isAdmin" (click)="Editar(proyecto)" class="btn editar"><i class="fas fa-edit"></i></button>
-                        <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn borrar"><i class="fas fa-trash"></i></button>
+                        <button *ngIf="isAdmin" (click)="Editar(proyecto)" class="btn editar"><i
+                                class="fas fa-edit"></i></button>
+                        <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn borrar"><i
+                                class="fas fa-trash"></i></button>
                     </div>
                 </div>
             </div>

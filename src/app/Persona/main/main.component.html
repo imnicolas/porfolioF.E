@@ -24,7 +24,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <img class="img-fluid" src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner">
+            <img class="img-fluid" src="../../../assets/pinosGrande.jpg" alt="el baner de la pagina" id="baner">
         </div>
 
 
@@ -34,13 +34,13 @@
             </div>
 
             <div class="col-8">
-                <div class="row d-flex justify-content-center">
-                    {{persona.nombre}} {{persona.apellido}}
+                <div style="border: solid 1px greenyellow;" class="row d-flex justify-content-center">
+                    [{{persona.nombre}} {{persona.apellido}}]
                 </div>
-                <div class="row d-flex justify-content-center">
+                <div style="margin-top: 20px;" class="row d-flex justify-content-center">
                     {{persona.titulo}}
                 </div>
-                <div class="row d-flex justify-content-center"> <!-- centramos columna y luego aplicamos breakpoints en columna para cambiar su disposicion -->
+                <div class="row d-flex justify-content-center"> <!-- centramos columna y luego aplicamos breakpoints en columna para cambiar su disposicion by Nahu-->
                     <div class="col-xl-4 col-lg-6 col-md-8 col-sm-8 col-10">
                         {{persona.hobbie}}
                     </div>
@@ -48,7 +48,6 @@
                 <div class="row d-flex justify-content-center">
                     <button *ngIf="isAdmin" (click)="Editar(persona)" class="btn editar"><i
                             class="fas fa-edit"></i></button>
-
                 </div>
 
             </div>
