@@ -22,11 +22,17 @@
             </div> -->
 
 
+    <div class="container-fluid d-flex text-center justify-content-center" style="margin: 10px;">
+        <span><a style="color: #fff;" class="nav-link active" routerLink="/login">Iniciar
+                Sesión</a>
+        </span>
+        <span><a style="color: #eee;" class="nav-link" routerLink="/registro">Crear Cuenta</a>
+        </span>
+    </div>
+
+
+
     <div class="container text-center d-flex justify-content-center">
-        <div class="row">
-            <div class="col"><a class="nav-link active" routerLink="/login">Iniciar Sesión</a></div>
-            <div class="col"><a class="nav-link" routerLink="/registro">Crear Cuenta</a></div>
-        </div>
         <div class="row">
             <div class="col">
                 <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
@@ -46,10 +52,11 @@
                     </div>
                     <span style="margin: 10px;">
                         <div class="form-group">
-                            <button class="btn btn-outline-success btn-block" [disabled]="!f.valid"><i
-                                    class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
+                            <button style="color: rgb(0, 0, 0);" class="btn btn-outline-success btn-block"
+                                [disabled]="!f.valid"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
                         </div>
                     </span>
+                    <span style="margin: 10px;"><button routerLink="/" class="btn btn-warning">Cancelar</button></span>
                 </form>
                 <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">Fail en el login:
                     {{errMsj}}
