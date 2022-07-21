@@ -1,5 +1,11 @@
-@media (max-width: 684px) {
+@media (max-width: 724px) {
     #icono {
+        display: none;
+    }
+}
+
+@media(max-width:353px){
+    .bienvenido{
         display: none;
     }
 }

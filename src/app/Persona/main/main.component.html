@@ -21,6 +21,28 @@
 </div> -->
 
 
+
+
+<div *ngIf="isLogged; else loggedOut">
+    <h2 style="color: blue;">
+        Hola {{nombreUsuario}}
+        <i class="far fa-thumbs-up"></i>
+    </h2>
+</div>
+
+
+
+<ng-template #loggedOut>
+    <h2>
+        No has iniciado sesion
+    </h2>
+    <i class="far fa-thumbs-down"></i>
+</ng-template>
+
+
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -34,22 +56,20 @@
             </div>
 
             <div class="col-8">
-                <div style="border: solid 1px greenyellow;" class="row d-flex justify-content-center">
-                    [{{persona.nombre}} {{persona.apellido}}]
+                <div>
+                    <h5 class="row d-flex justify-content-center">[{{persona.nombre}} {{persona.apellido}}]</h5>
                 </div>
                 <div style="margin-top: 20px;" class="row d-flex justify-content-center">
                     {{persona.titulo}}
                 </div>
-                <div class="row d-flex justify-content-center"> <!-- centramos columna y luego aplicamos breakpoints en columna para cambiar su disposicion by Nahu-->
+                <div class="row d-flex justify-content-center">
+                    <!-- centramos columna y luego aplicamos breakpoints en columna para cambiar su disposicion by Nahu-->
                     <div class="col-xl-4 col-lg-6 col-md-8 col-sm-8 col-10">
                         {{persona.hobbie}}
                     </div>
                 </div>
-                <div class="row d-flex justify-content-center">
-                    <button *ngIf="isAdmin" (click)="Editar(persona)" class="btn editar"><i
-                            class="fas fa-edit"></i></button>
-                </div>
-
+                <span class="d-flex justify-content-center"><button *ngIf="isAdmin" (click)="Editar(persona)"
+                        class="btn editar"><i class="fas fa-edit"></i></button></span>
             </div>
 
         </div>

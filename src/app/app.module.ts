@@ -8,7 +8,6 @@ import { MainComponent } from './Persona/main/main.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceService } from '../app/Service/service.service';
 import { HttpClientModule } from '@angular/common/http';
-import { NavBarComponent } from './Persona/nav-bar/nav-bar.component';
 import { ContactoService } from './Service/contacto.service';
 import { ProyectoComponent } from './Persona/proyecto/proyecto.component';
 import { ProyectoEdiComponent } from './Persona/proyecto-edi/proyecto-edi.component';
@@ -30,7 +29,6 @@ import { EstudioService } from './Service/estudio.service';
 import { AlifeFileToBase64Module } from 'alife-file-to-base64';
 import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
-import { IndexComponent } from './Persona/index/index.component';
 import { MenuComponent } from './Persona/menu/menu.component';
 import { interceptorProvider } from './interceptors/persona-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
@@ -42,7 +40,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddComponent,
     EdiComponent,
     MainComponent,
-    NavBarComponent,
     ProyectoComponent,
     ProyectoEdiComponent,
     ProyectoAddComponent,
@@ -58,7 +55,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EstudioEdiComponent,
     LoginComponent,
     RegistroComponent,
-    IndexComponent,
     MenuComponent,
   ],
   imports: [

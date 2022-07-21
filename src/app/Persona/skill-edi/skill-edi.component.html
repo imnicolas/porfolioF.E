@@ -1,4 +1,4 @@
-<div class="container col-md-6">
+<!-- <div class="container col-md-6">
   <div class="card">
     <div class="card-header">
       <h3>Modificar Skill</h3>
@@ -11,13 +11,10 @@
         </div>
         <div class="form-group">
           <label for="">Progress:</label>
-          <input [(ngModel)]="skill.progress" name="progress" type="text" class="form-control"/>
+          <input [(ngModel)]="skill.progress" name="progress" type="text" class="form-control" />
         </div>
         <div class="form-group">
           <label for="">Img:</label>
-          <!-- <input [(ngModel)]="skill.img" name="img" type="file" class="form-control"> -->
-          <!-- <input [(ngModel)]="skill.img" name="img" type="file" accept="image/jpg,image/jpeg,image/png,image/webp"
-            alife-file-to-base64 (onFileChanged)="obtener($event)" /> -->
           <input type="file" accept=".png , .jpg" alife-file-to-base64 (onFileChanged)="obtener($event)" name="img"
             class="form-control">
         </div>
@@ -26,7 +23,39 @@
       </form>
     </div>
   </div>
+</div> -->
+
+
+<div class="container text-center d-flex justify-content-center">
+  <div class="row">
+    <div class="col">
+      <form action="">
+        <div class="row"><div class="form-group">
+          <label for="">Nombre:</label>
+          <input [(ngModel)]="skill.nombre" name="nombre" type="text" class="form-control">
+        </div></div>
+        <div class="row"><div class="form-group">
+          <label for="">Progress:</label>
+          <input [(ngModel)]="skill.progress" name="progress" type="text" class="form-control" />
+        </div></div>
+        <div class="row"><div class="form-group">
+          <label for="">Img:</label>
+          <input type="file" accept=".png , .jpg" alife-file-to-base64 (onFileChanged)="obtener($event)" name="img"
+            class="form-control">
+        </div></div>
+        <button (click)="Actualizar(skill)" class="btn btn-danger">Actualizar</button>
+        <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+      </form>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
 
 
 <!-- <div class="card">

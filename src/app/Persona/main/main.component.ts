@@ -13,12 +13,14 @@ export class MainComponent implements OnInit {
   personas: Persona[] = [];
   roles: string[];
   isAdmin = false;
+  isLogged = false;
+  nombreUsuario = '';
 
 
 
 
   constructor(private router: Router, private service: ServiceService, private tokenService: TokenService) { }
-  ngOnInit(): void {
+  ngOnInit(): void {  
     this.service.getPersona()
       .subscribe(data => {
         this.personas = data;
@@ -29,6 +31,15 @@ export class MainComponent implements OnInit {
         this.isAdmin = true;
       }
     });
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.nombreUsuario = this.tokenService.getUserName();
+    } else {
+      this.isLogged = false;
+      this.nombreUsuario = '';
+    }
+    
+    
   }
   
   Nuevo() {
