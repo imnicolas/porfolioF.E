@@ -24,19 +24,19 @@
 
 
 <div *ngIf="isLogged; else loggedOut">
-    <h2 style="color: blue;">
+    <h3 style="color: lightblue ;">
         Hola {{nombreUsuario}}
         <i class="far fa-thumbs-up"></i>
-    </h2>
+    </h3>
 </div>
 
 
 
 <ng-template #loggedOut>
-    <h2>
+    <h3 style="color: lightblue;">
         No has iniciado sesion
         <i class="far fa-thumbs-down"></i>
-    </h2>
+    </h3>
 </ng-template>
 
 
@@ -46,16 +46,20 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <picture>
             <img class="img-fluid" src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner">
+        </picture>
         </div>
 
 
         <div class="row" *ngFor="let persona of personas">
-            <div class="col-4 d-flex justify-content-center">
-                <img class="img-fluid rounded-circle" src="{{persona.img}}" alt="cargando imagen" id="perfil" />
+            <div class="col-8 d-flex justify-content-center">
+                <img oncontextmenu="return false;" class="img-fluid rounded-circle" src="{{persona.img}}" alt="cargando imagen" id="perfil" />
             </div>
 
-            <div class="col-8">
+            <div class="col-4 datos">
+                <span class="d-flex justify-content-center"><button *ngIf="isAdmin" (click)="Editar(persona)"
+                        class="btn editar"><i class="fas fa-edit"></i></button></span>
                 <div>
                     <h5 class="row d-flex justify-content-center">[{{persona.nombre}} {{persona.apellido}}]</h5>
                 </div>
@@ -68,8 +72,6 @@
                         {{persona.hobbie}}
                     </div>
                 </div>
-                <span class="d-flex justify-content-center"><button *ngIf="isAdmin" (click)="Editar(persona)"
-                        class="btn editar"><i class="fas fa-edit"></i></button></span>
             </div>
 
         </div>

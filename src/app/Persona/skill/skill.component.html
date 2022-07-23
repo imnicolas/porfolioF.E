@@ -77,7 +77,7 @@
 </div> -->
 
 
-<div class="container">
+<div class="container" style="background-color:red;">
     <carousel class="cellsToShow">
         <div class="carousel-cell" *ngFor="let skill of skills">
             <h5>{{skill.nombre}}</h5>
@@ -86,9 +86,6 @@
                     style="margin-right: 15px;"><i class="fas fa-edit"></i></button>
                 <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn borrar"><i
                         class="fas fa-trash"></i></button></span>
-            <div class="carousel-cell">
-                <h1>ahi LUISSSS</h1>
-            </div>
         </div>
     </carousel>
 </div>
