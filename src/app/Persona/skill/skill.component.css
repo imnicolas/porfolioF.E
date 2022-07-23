@@ -7,6 +7,15 @@
   }
 
 
+
+
   .titulo{
     text-align: center;
   }
+
+  /* .skiles{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  } */

@@ -33,6 +33,7 @@ import { MenuComponent } from './Persona/menu/menu.component';
 import { interceptorProvider } from './interceptors/persona-interceptor.service';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     AlifeFileToBase64Module,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    IvyCarouselModule
   ],
   providers: [ServiceService,ContactoService,ProyectoService,ExperienciaService,SkillService,EstudioService,interceptorProvider],
   bootstrap: [AppComponent]
