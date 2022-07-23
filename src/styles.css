@@ -34,12 +34,12 @@ body {
 
 .editar {
   margin: 10px;
-  color: #5e5473;
+  color: #ede89d;
   border: solid 1px yellow;
 }
 
 .borrar {
-  color: #5e5473;
+  color: #ff0048;
   justify-content: space-around;
   border: solid 1px yellow;
   margin: 10px;
@@ -47,7 +47,7 @@ body {
 
 .agregar {
   size: 100vh;
-  color: #5e5473;
+  color: #ede89d;
   justify-content: space-around;
   border: solid 2px yellow;
   margin: 10px;
