@@ -82,7 +82,7 @@
         <div class="carousel-cell" *ngFor="let skill of skills">
             <h5>{{skill.nombre}}</h5>
             <img src="{{skill.img}}" accept="image/*" id="logos" alt="no se selecciono ninguna imagen para mostrar" />
-            <span><button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"
+            <span style="margin: 10px;"><button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"
                     style="margin-right: 15px;"><i class="fas fa-edit"></i></button>
                 <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn borrar"><i
                         class="fas fa-trash"></i></button></span>
