@@ -10,7 +10,7 @@ import { Skill } from '../modelo/skill';
 })
 export class SkillEdiComponent implements OnInit {
 
-  skill: Skill = new Skill(0, "", 0, "");
+  skill: Skill = new Skill(0, "", 0, "","");
 
   constructor(private router: Router, private service: SkillService) { }
 

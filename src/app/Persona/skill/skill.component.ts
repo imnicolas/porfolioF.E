@@ -48,7 +48,7 @@ export class SkillComponent implements OnInit {
     this.service.deleteSkill(skill)
       .subscribe(data => {
         this.skills = this.skills.filter(p => p !== skill);
-        alert("Skill eliminado...");
+        alert("Skill eliminada...");
       })
   }
 

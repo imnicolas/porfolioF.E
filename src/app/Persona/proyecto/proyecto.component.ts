@@ -41,7 +41,7 @@ export class ProyectoComponent implements OnInit {
     this.service.deleteProyecto(proyecto)
       .subscribe(data => {
         this.proyectos = this.proyectos.filter(p => p !== proyecto);
-        alert("Usuario eliminado...");
+        alert("Proyecto eliminado...");
       })
   }
 }

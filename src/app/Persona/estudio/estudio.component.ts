@@ -45,7 +45,7 @@ export class EstudioComponent implements OnInit {
     this.service.deleteEstudio(estudio)
       .subscribe(data => {
         this.estudios = this.estudios.filter(p => p !== estudio);
-        alert("Usuario eliminado...");
+        alert("Estudio eliminado...");
       })
   }
 

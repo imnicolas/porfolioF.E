@@ -10,7 +10,7 @@ import { Skill } from '../modelo/skill';
 })
 export class SkillAddComponent implements OnInit {
 
-  skill: Skill = new Skill(0, "", 0, "");
+  skill: Skill = new Skill(0,"",0,"","");
   constructor(private router: Router, private service: SkillService) { }
 
   ngOnInit() {
@@ -18,7 +18,6 @@ export class SkillAddComponent implements OnInit {
 
   obtener(e: any) {
     this.skill.img = e[0].base64;
-    console.log(e[0].base64);
   }
 
   Cancel() {
@@ -26,7 +25,7 @@ export class SkillAddComponent implements OnInit {
   }
 
   Guardar() {
-    this.service.createSkill(this.skill).subscribe(data => { this.skill = data; })
+    this.service.createSkill(this.skill).subscribe(data => {});
     this.router.navigate(['home']);
   }
 }

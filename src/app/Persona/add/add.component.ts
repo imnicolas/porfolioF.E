@@ -18,7 +18,6 @@ export class AddComponent implements OnInit {
 
   obtener(e:any){
     this.persona.img=e[0].base64;
-     console.log(e);
   }
 
   Guardar() {
@@ -29,6 +28,5 @@ export class AddComponent implements OnInit {
         // window.location.reload();
         this.router.navigate(["home"]);
       })
-    console.log(this.persona);
   }
 }

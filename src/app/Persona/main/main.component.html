@@ -1,25 +1,5 @@
 <app-menu></app-menu>
 
-<!-- <div class="container">
-    <div class="header">
-        <div class="row">
-            <div class="col-12"><img src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner"></div>
-            <div class="col"></div>
-            <div *ngFor="let persona of personas" class="row">
-                <div class="col-8">{{persona.nombre}} {{persona.apellido}} {{persona.titulo}} {{persona.hobbie}}
-                    <button *ngIf="isAdmin" (click)="Editar(persona)" class="btn btn-secondary"><i
-                        class="fas fa-edit"></i></button>
-                </div>
-                <div class="col-4">
-                     <button (click)="Nuevo()" class="btn btn-secondary" style="margin-left: 10px;">Nuevo</button>
-                    <button (click)="Delete(persona)" class="btn btn-danger" style="margin-top: 10px;"><i
-                            class="fas fa-trash"></i></button> 
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
 
 
 
@@ -47,31 +27,37 @@
     <div class="row">
         <div class="col-12">
             <picture>
-            <img class="img-fluid" src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner">
-        </picture>
+                <img class="img-fluid" src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner">
+            </picture>
         </div>
 
 
         <div class="row" *ngFor="let persona of personas">
             <div class="col-8 d-flex justify-content-center">
-                <img oncontextmenu="return false;" class="img-fluid rounded-circle" src="{{persona.img}}" alt="cargando imagen" id="perfil" />
+                <picture>
+                    <img oncontextmenu="return false;" class="img-fluid rounded-circle" src="{{persona.img}}"
+                        alt="cargando imagen" id="perfil" />
+                </picture>
             </div>
+            
+<div class="row">
+            <span class="d-flex justify-content-center"><button *ngIf="isAdmin" (click)="Editar(persona)"
+                    class="btn editar"><i class="fas fa-edit"></i>editar</button></span>
+                </div>
+
+            <h2 class="row d-flex justify-content-center">{{persona.nombre}} {{persona.apellido}}</h2>
 
             <div class="col-4 datos">
-                <span class="d-flex justify-content-center"><button *ngIf="isAdmin" (click)="Editar(persona)"
-                        class="btn editar"><i class="fas fa-edit"></i></button></span>
-                <div>
-                    <h5 class="row d-flex justify-content-center">[{{persona.nombre}} {{persona.apellido}}]</h5>
-                </div>
-                <div style="margin-top: 20px;" class="row d-flex justify-content-center">
-                    {{persona.titulo}}
+                <div style="margin: 20px;" class="row d-flex justify-content-center">
+                    <h3>{{persona.titulo}}</h3>
                 </div>
                 <div class="row d-flex justify-content-center">
                     <!-- centramos columna y luego aplicamos breakpoints en columna para cambiar su disposicion by Nahu-->
-                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-8 col-10">
-                        {{persona.hobbie}}
-                    </div>
                 </div>
+            </div>
+            <div style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+                class="col-xl-4 col-lg-6 col-md-8 col-sm-8 col-10 datos">
+                {{persona.hobbie}}
             </div>
 
         </div>
@@ -79,75 +65,3 @@
     </div>
 
 </div>
-
-
-
-
-
-
-
-
-<!-- Baner y mi descripcion con imagen de perfil -->
-
-
-<!-- <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12"><img src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner">
-            <div class="row">
-                <div *ngFor="let persona of personas" class="text-center" class="col-lg-12">
-                    <img src="{{persona.img}}" accept="image/*" alt="mi imagen de perfil" id="perfil">
-                    <br>
-                    {{persona.nombre}} {{persona.apellido}}
-                    <br>
-                    {{persona.titulo}}
-                    <br>
-                    {{persona.hobbie}}
-                    <div class="mt-3" *ngIf="isAdmin"><button (click)="Editar(persona)" class="btn btn-secondary"><i
-                                class="fas fa-edit">
-                                Editar</i></button></div>
-                </div>
-                <button (click)="Delete(persona)" class="btn btn-danger" style="margin-top: 10px;"><i
-                        class="fas fa-trash"></i></button> 
-                 <button (click)="Nuevo()" class="btn btn-secondary" style="margin-left: 10px;">Nuevo</button> 
-                <button (click)="Listar()" class="btn btn-warning">Listar</button> 
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-<!-- <div class="container-fluid">
-    <img src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner">
-<table class="table table-hover">
-    <tbody>
-        <tr *ngFor="let persona of personas" class="text-center">
-            <td>{{persona.nombre}} {{persona.apellido}}</td>
-            <td>{{persona.titulo}}</td>
-            <td>{{persona.hobbie}}</td>
-            <td><img src="{{persona.img}}" alt="#" id="perfil"></td>
-            <td>
-                <button *ngIf="isAdmin" (click)="Editar(persona)" class="btn btn-secondary"><i class="fas fa-edit"></i></button>
-                     <button (click)="Nuevo()" class="btn btn-secondary" style="margin-left: 10px;">Nuevo</button>
-                    <button (click)="Listar()" class="btn btn-warning">Listar</button> 
-                    <button (click)="Delete(persona)" class="btn btn-danger" style="margin-top: 10px;"><i class="fas fa-trash"></i></button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div> -->
-
-
-
-
-<!-- BANNER -->
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="col">
-                <div class="img1"><img src="Fingershot-21.jpg" alt=""></div>  
-                <div class="edit-profile d-flex justify-content-center"><a href=""><i class="bi bi-pencil-square"></i></a></div> 
-            </div>
-        </div>
-    </div>
-   </a>
-  </div> -->
