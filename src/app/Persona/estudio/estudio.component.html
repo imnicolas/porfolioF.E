@@ -27,7 +27,7 @@
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(estudio)"
                         class="btn editar"><i class="fas fa-edit"></i></button>
                     <!-- <button (click)="Listar()" class="btn btn-warning">Listar</button> -->
-                    <button *ngIf="isAdmin" (click)="Delete()" class="btn borrar"><i
+                    <button *ngIf="isAdmin" (click)="Delete(estudio)" class="btn borrar"><i
                             class="fas fa-trash"></i></button>
                 </div>
             </div>

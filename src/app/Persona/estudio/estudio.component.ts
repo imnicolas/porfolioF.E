@@ -41,7 +41,12 @@ export class EstudioComponent implements OnInit {
     this.router.navigate(["editE"]);
   }
 
-  Delete() {
-    this.router.navigate(["estudio-del"]);
+  Delete(estudio: Estudio) {
+    this.service.deleteEstudio(estudio)
+      .subscribe(data => {
+        this.estudios = this.estudios.filter(p => p !== estudio);
+        alert("Estudio eliminado...");
+      })
   }
+
 }

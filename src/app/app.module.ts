@@ -34,10 +34,7 @@ import { interceptorProvider } from './interceptors/persona-interceptor.service'
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { EstudioDeleteComponent } from './Persona/estudio-delete/estudio-delete.component';
-import { ExperienciaDeleteComponent } from './Persona/experiencia-delete/experiencia-delete.component';
-import { ProyectoDeleteComponent } from './Persona/proyecto-delete/proyecto-delete.component';
-import { SkillDeleteComponent } from './Persona/skill-delete/skill-delete.component';
+
 
 @NgModule({
   declarations: [
@@ -61,10 +58,6 @@ import { SkillDeleteComponent } from './Persona/skill-delete/skill-delete.compon
     LoginComponent,
     RegistroComponent,
     MenuComponent,
-    EstudioDeleteComponent,
-    ExperienciaDeleteComponent,
-    ProyectoDeleteComponent,
-    SkillDeleteComponent,
   ],
   imports: [
     BrowserModule,
