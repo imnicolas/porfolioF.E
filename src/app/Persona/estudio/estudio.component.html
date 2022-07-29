@@ -7,6 +7,8 @@
                 style="margin-left: 10px;margin-right: 10px;"><i class="far fa-plus-square"
                     style="justify-content: end;"></i></button></div>
     </div>
+    <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn borrar"><i
+            class="fas fa-trash"></i></button>
 </div>
 
 
@@ -27,13 +29,33 @@
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(estudio)"
                         class="btn editar"><i class="fas fa-edit"></i></button>
                     <!-- <button (click)="Listar()" class="btn btn-warning">Listar</button> -->
-                    <button *ngIf="isAdmin" (click)="Delete(estudio)" class="btn borrar"><i
-                            class="fas fa-trash"></i></button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabelE" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Proyectos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer" *ngFor="let estudio of estudios">
+
+                <h5>{{estudio.establecimiento}}</h5>
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button *ngIf="isAdmin" (click)="Delete(estudio)" class="btn btn-warning borrar">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 

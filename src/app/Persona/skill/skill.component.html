@@ -50,17 +50,7 @@
 
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-8 titulo">
-            <h1>Tecnologías</h1>
-        </div>
-        <div class="col-4 justify-content-center"><button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i
-                    class="far fa-plus-square"></i></button></div>
-    </div>
-    <button *ngIf="isAdmin" class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-            class="fas fa-trash"></i></button>
-</div>
+
 
 <!-- <div style="margin:10px;" class="row">
     <div *ngFor="let skill of skills" class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mx-2 my-2">
@@ -94,6 +84,17 @@
     </carousel>
 </div> -->
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8 titulo">
+            <h1>Tecnologías</h1>
+        </div>
+        <div class="col-4 justify-content-center"><button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i
+                    class="far fa-plus-square"></i></button></div>
+    </div>
+    <button *ngIf="isAdmin" class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+            class="fas fa-trash"></i></button>
+</div>
 <footer>
     <div *ngFor="let skill of skills" class="container">
         <span class="header">
@@ -112,7 +113,6 @@
         </span>
         <span class="footer">
             <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i class="fas fa-edit"></i></button>
-
         </span>
     </div>
 </footer>

@@ -44,6 +44,8 @@
         </div>
 
     </div>
+    <button *ngIf="isAdmin" class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModalXp"><i
+        class="fas fa-trash"></i></button>
 
 </div>
 
@@ -67,6 +69,26 @@
                     <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn borrar"><i
                             class="fas fa-trash"></i></button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModalXp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Experiencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer" *ngFor="let experiencia of experiencias">
+                
+                    <h5>{{experiencia.nombre}}</h5>
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn btn-warning borrar">Eliminar</button>
             </div>
         </div>
     </div>

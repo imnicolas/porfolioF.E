@@ -81,8 +81,10 @@
         <div class="col-4 justify-content-center">
             <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i class="far fa-plus-square"></i></button>
         </div>
-
+        
     </div>
+    <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalP" class="btn borrar"><i
+            class="fas fa-trash"></i></button>
 
 </div>
 
@@ -131,9 +133,26 @@
             <div class="row">
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(proyecto)"
                         class="btn editar"><i class="fas fa-edit"></i></button>
-                    <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn borrar"><i
-                            class="fas fa-trash"></i></button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminar Proyectos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer" *ngFor="let proyecto of proyectos">
+
+                <h5>{{proyecto.nombre}}</h5>
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn btn-warning borrar">Eliminar</button>
             </div>
         </div>
     </div>
