@@ -20,7 +20,7 @@ export class RegistroComponent implements OnInit {
   errMsj: string;
   isLogged = false;
 
-  constructor(private tokenService: TokenService, private authService: AuthService, private router: Router, private toastr: ToastrService ) { }
+  constructor(private tokenService: TokenService, private authService: AuthService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
     if (this.tokenService.getToken()) {
@@ -40,8 +40,8 @@ export class RegistroComponent implements OnInit {
       },
       err => {
         this.errMsj = err.error.mensaje;
-        this.toastr.error(this.errMsj, 'Fail', {
-          timeOut: 3000,  positionClass: 'toast-top-center',
+        this.toastr.error(this.errMsj, 'Error, revisa tu usuario y password', {
+          timeOut: 5000, positionClass: 'toast-top-center',
         });
         // console.log(err.error.message);
       }

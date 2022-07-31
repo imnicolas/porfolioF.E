@@ -1,90 +1,4 @@
-<!-- <div class="container" style="margin-bottom: 20px;">
-    <div class="card">
-        <div class="card-header">
-            <h3>Skills</h3>
-            <table class="table table-hover" style="text-align: center;">
-                <thead>
-                    <tr>
-                        <th>NOMBRE</th>
-                        <th>PROGRESS</th>
-                        <th>IMG</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let skill of skills" class="text-center">
-                        <td>{{skill.nombre}}</td>
-                        <td>{{skill.progress}}</td>
-                        <td>{{skill.img}}</td>
-                        <td>
-                            <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100">básico</div>
-                        </td>
-                        <td>
-                            <button (click)="Editar(skill)" class="btn btn-secondary"><i class="fas fa-edit"> Editar</i></button>
-                            <button (click)="Nuevo()" class="btn btn-warning"
-                                style="margin-left: 10px;margin-right: 10px;">Nuevo</button>
-                            <button (click)="Listar()" class="btn btn-warning">Listar</button>
-                            <button (click)="Delete(skill)" class="btn btn-danger" style="margin-top: 10px;"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div> -->
-
-<!-- <div class="container">
-        <div *ngFor="let skill of skills" class="row text-center">
-            <div class="col-lg-12">
-                {{skill.nombre}}<br>
-                <img src="{{skill.img}}" accept="image/*" id="logos" alt="no se selecciono ninguna imagen para mostrar" />
-                <div class="col-sm-12 progress-bar" role="progressbar" attr.style="width:{{skill.progress}}%"
-                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">básico</div>
-            </div>
-            <div class="col-lg-12">
-                <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar" style="margin-right: 15px;"><i
-                        class="fas fa-edit"></i></button>
-                <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn borrar"><i class="fas fa-trash"></i></button>
-            </div>
-        </div>
-    </div> -->
-
-
-
-
-
-<!-- <div style="margin:10px;" class="row">
-    <div *ngFor="let skill of skills" class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mx-2 my-2">
-        <div class="row">{{skill.nombre}}</div>
-        <div class="row"><img src="{{skill.img}}" accept="image/*" id="logos"
-                alt="no se selecciono ninguna imagen para mostrar" /></div>
-        <div class="row">
-            <div class="col-sm-4 progress-bar" role="progressbar" attr.style="width:{{skill.progress}}%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">básico</div>
-        </div>
-        <span style="margin: 10px;"><button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"
-                style="margin-right: 15px;"><i class="fas fa-edit"></i></button>
-            <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn borrar"><i
-                    class="fas fa-trash"></i></button></span>
-    </div>
-</div> -->
-
-
-<!-- <div class="container" style="background-color:red;">
-    <carousel class="cellsToShow">
-        <div class="carousel-cell" *ngFor="let skill of skills">
-            <picture>
-                <img src="{{skill.img}}" accept="image/*" id="logos"
-                    alt="no se selecciono ninguna imagen para mostrar" />
-            </picture>
-            <span><button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i
-                        class="fas fa-edit"></i></button>
-                <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn borrar"><i
-                        class="fas fa-trash"></i></button></span>
-        </div>
-    </carousel>
-</div> -->
-
-<div class="container-fluid">
+<div class="container-fluid" id="skill" >
     <div class="row">
         <div class="col-8 titulo">
             <h1>Tecnologías</h1>
@@ -92,13 +6,15 @@
         <div class="col-4 justify-content-center"><button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i
                     class="far fa-plus-square"></i></button></div>
     </div>
-    <button *ngIf="isAdmin" class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+    <button *ngIf="isAdmin" class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModalSkill"><i
             class="fas fa-trash"></i></button>
 </div>
+
+
 <footer>
     <div *ngFor="let skill of skills" class="container">
-        <span class="header">
-            <h3> {{skill.nombre}} </h3>
+        <span class="header text-center">
+            <h4> {{skill.nombre}} </h4>
         </span>
         <span class="body">
             <div class="progress">
@@ -109,17 +25,17 @@
             <picture>
                 <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
             </picture>
-            <code>{{skill.nivel}}</code><br>
+            <p>{{skill.nivel}}</p>
+            <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i class="fas fa-hammer"></i></button>
         </span>
         <span class="footer">
-            <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i class="fas fa-edit"></i></button>
         </span>
     </div>
 </footer>
 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModalSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -128,10 +44,10 @@
             </div>
             <div class="modal-footer" *ngFor="let skill of skills">
                 <picture>
-                    <img src="{{skill.img}}" alt="Logos" id="logos" accept="image/*" />
+                    <img src="{{skill.img}}" alt="Aca se muestran imagenes Logos" id="logos" accept="image/*" />
                 </picture>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn btn-warning borrar">Eliminar</button>
+                <button type="button" class="btn btn" data-bs-dismiss="modal">Cancelar</button>
+                <button *ngIf="isAdmin" (click)="Delete(skill)" class="btn btn borrar">Eliminar</button>
             </div>
         </div>
     </div>

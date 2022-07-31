@@ -1,31 +1,3 @@
-<!-- <div class="container col-md-6">
-  <div class="card">
-    <div class="card-header">
-      <h3>Agregar Skill</h3>
-    </div>
-    <div class="card-body">
-      <form action="">
-        <div class="form-group">
-          <label for="">Nombres:</label>
-          <input [(ngModel)]="skill.nombre" name="nombre" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="">Progress:</label>
-          <input [(ngModel)]="skill.progress" name="progress" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="">Img:</label>
-          <input [(ngModel)]="skill.img" type="file" accept="image/*" alife-file-to-base64
-            (onFileChanged)="obtener($event)" name="img" class="form-control">
-        </div>
-        <button (click)="Guardar()" class="btn btn-danger">Guardar</button>
-        <button (click)="Cancel()" class="btn btn-secondary">Cancelar</button>
-      </form>
-    </div>
-  </div>
-</div> -->
-
-
 <div class="container text-center d-flex justify-content-center">
   <div class="row">
     <div class="col">
@@ -44,7 +16,7 @@
         </div>
         <div class="row">
           <div class="form-group">
-            <label for="">Img:</label>
+            <label for="">Imagen:</label>
             <input [(ngModel)]="skill.img" type="file" accept="image/*" alife-file-to-base64
               (onFileChanged)="obtener($event)" name="img" class="form-control">
           </div>
@@ -52,11 +24,12 @@
         <div class="row">
           <div class="form-group">
             <label for="">Nivel:</label>
-            <input placeholder="Tipee basico/intermedio o avanzado" [(ngModel)]="skill.nivel" name="nivel" type="text" class="form-control">
+            <input placeholder="Tipee basico/intermedio o avanzado" [(ngModel)]="skill.nivel" name="nivel" type="text"
+              class="form-control">
           </div>
         </div>
-        <span style="margin: 10px;"><button (click)="Guardar()" class="btn btn-danger">Guardar</button>
-          <button (click)="Cancel()" class="btn btn-secondary">Cancelar</button></span>
+        <button style="margin:2em;" (click)="Guardar()" class="btn btn-danger">Guardar</button>
+          <button (click)="Cancel()" class="btn btn-secondary">Cancelar</button>
       </form>
     </div>
   </div>

@@ -1,77 +1,4 @@
-<!-- <div class="container-fluid" style="margin-bottom: 20px;">
-    <div class="card">
-        <div class="card-header">
-            <h3>Proyectos</h3>
-            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-secondary"><i class="far fa-plus-square"
-                style="justify-content: end;"></i></button>
-            <table class="table table-hover" style="text-align: center;">
-                <thead>
-                    <tr>
-                        <th>NOMBRE</th>
-                        <th>DESEMPENIO</th>
-                        <th>URL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let proyecto of proyectos" class="text-center">
-                        <td>{{proyecto.nombre}}</td>
-                        <td>{{proyecto.desempenio}}</td>
-                        <td><a href="">{{proyecto.url}}</a></td>
-                        <td>
-                            <button *ngIf="isAdmin" (click)="Editar(proyecto)" class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                            <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn btn-danger"><i
-                                    class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div> -->
-
-
-<!-- <div class="container">
-    <div class="header"><button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i class="far fa-plus-square"
-                style="justify-content: end;"></i></button></div>
-    <div *ngFor="let proyecto of proyectos" class="body">
-        <div class="row">
-            <div class="col-4">{{proyecto.nombre}} {{proyecto.desempenio}} <a href="">{{proyecto.url}}</a></div>
-        </div>
-        <div class="row">
-            <div class="col-4"><button *ngIf="isAdmin" (click)="Editar(proyecto)" class="btn editar"><i
-                        class="fas fa-edit"></i></button>
-                <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn borrar"><i
-                        class="fas fa-trash"></i></button>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-<!-- <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i class="far fa-plus-square"
-        style="justify-content: end;"></i></button>
-<div class="container">
-    <div *ngFor="let proyecto of proyectos" class="card">
-        <div class="row">
-            <div class="col-6">
-                {{proyecto.nombre}} <br> {{proyecto.desempenio}}
-            </div>
-            <div class="col-2">
-                <a href="">{{proyecto.url}}</a>
-            </div>
-            <div class="col-4">
-                <button *ngIf="isAdmin" (click)="Editar(proyecto)" class="btn editar"><i
-                        class="fas fa-edit"></i></button>
-                <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn borrar"><i
-                        class="fas fa-trash"></i></button>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-<div class="container-fluid">
+<div class="container-fluid" id="proyecto" >
     <div class="row">
 
         <div class="col-8 titulo">
@@ -81,7 +8,7 @@
         <div class="col-4 justify-content-center">
             <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i class="far fa-plus-square"></i></button>
         </div>
-        
+
     </div>
     <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalP" class="btn borrar"><i
             class="fas fa-trash"></i></button>
@@ -89,32 +16,6 @@
 </div>
 
 
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 mx-2 my-2" *ngFor="let proyecto of proyectos">
-            <div class="card">
-                <div class="row">
-                    <h4>{{proyecto.nombre}}</h4>
-                </div>
-                <div class="row">
-                    <a href="{{proyecto.url}}">{{proyecto.url}}</a>
-                </div>
-                <div class="row">
-                    <p>{{proyecto.desempenio}}</p>
-                </div>
-                <div class="row d-flex">
-                    <div>
-                        <button *ngIf="isAdmin" (click)="Editar(proyecto)" class="btn editar"><i
-                                class="fas fa-edit"></i></button>
-                        <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn borrar"><i
-                                class="fas fa-trash"></i></button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div> -->
 
 
 
@@ -130,9 +31,12 @@
             <div class="col-xl-12 col-lg-6 col-sm-12">
                 <p>{{proyecto.desempenio}}</p>
             </div>
+            <div class="col-xl-12 col-lg-6 col-sm-12">
+                <a class="nav-link" href="proyecto.url" ></a>
+            </div>
             <div class="row">
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(proyecto)"
-                        class="btn editar"><i class="fas fa-edit"></i></button>
+                        class="btn editar"><i class="fas fa-hammer"></i></button>
                 </div>
             </div>
         </div>
@@ -148,59 +52,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-footer" *ngFor="let proyecto of proyectos">
-
                 <h5>{{proyecto.nombre}}</h5>
-
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn btn-warning borrar">Eliminar</button>
+                <button type="button" class="btn btn" data-bs-dismiss="modal">Cancelar</button>
+                <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn btn borrar">Eliminar</button>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-<!-- <div class="container-fluid">
-    <div class="row text-center">
-        <div class="col-lg-4">
-            <h3>Proyectos</h3>
-            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-secondary"><i class="far fa-plus-square"></i></button>
-        </div>
-    </div>
-    <span *ngFor="let proyecto of proyectos">
-        <div class="row text-center">
-            <div class="col-lg-4">
-                {{proyecto.nombre}}<br>{{proyecto.desempenio}}<br>
-            </div>
-            <a href="">{{proyecto.url}}</a>
-            <div class="col-lg-4">
-                <button *ngIf="isAdmin" (click)="Editar(proyecto)" class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                 <button (click)="Listar()" class="btn btn-warning">Listar</button> 
-                <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-            </div>
-        </div>
-    </span>
-</div> -->
-
-
-
-
-
-
-<!-- <div class="container">
-        <div *ngFor="let proyecto of proyectos" class="row">
-            <div class="col-sm-2" style="justify-content: between;">Nombre</div>
-            <div class="col-sm-2" style="justify-content: between;">Desempenio</div>
-            <div class="col-sm-2" style="justify-content: between;">Url</div>
-            <div class="col-sm-6" style="justify-content: between;">
-                {{proyecto.nombre}}{{proyecto.desempenio}}{{proyecto.url}}
-                <button (click)="Editar(proyecto)" class="btn btn-secondary">Editar</button>
-                <button (click)="Nuevo()" class="btn btn-warning"
-                style="margin-left: 10px;margin-right: 10px;">Nuevo</button>
-                <button (click)="Listar()" class="btn btn-warning">Listar</button>
-                <button (click)="Delete(proyecto)" class="btn btn-danger">Delete</button></div>
-            </div>
-        </div> -->

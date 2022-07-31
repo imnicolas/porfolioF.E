@@ -1,38 +1,4 @@
-<!-- <div class="container" style="margin-bottom: 20px;">
-    <div class="card">
-        <div class="card-header">
-            <h3>EXPERIENCIAS</h3>
-            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"
-                style="margin-left: 10px;margin-right: 10px;"><i class="far fa-plus-square"
-                    style="justify-content: end;"></i></button>
-            <table class="table table-hover" style="text-align: center;">
-                <thead>
-                    <tr>
-                        <th>NOMBRE</th>
-                        <th>DESEMPENIO</th>
-                        <th>FECHA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let experiencia of experiencias" class="text-center">
-                        <td>{{experiencia.nombre}}</td>
-                        <td>{{experiencia.puesto}}</td>
-                        <td>{{experiencia.fecha}}</td>
-                        <td>
-                            <button *ngIf="isAdmin" (click)="Editar(experiencia)" class="btn editar"
-                                style="margin-right: 15px;"><i class="fas fa-edit"></i></button>
-                             <button (click)="Listar()" class="btn btn-warning">Listar</button> 
-                            <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn borrar"
-                                style="margin-top: 10px;"><i class="fas fa-trash"></i></button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div> -->
-
-    
-<div class="container-fluid">
+<div class="container-fluid" id="experiencia">
     <div class="row">
 
         <div class="col-8 titulo">
@@ -44,8 +10,8 @@
         </div>
 
     </div>
-    <button *ngIf="isAdmin" class="btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModalXp"><i
-        class="fas fa-trash"></i></button>
+    <button *ngIf="isAdmin" class="btn btn borrar" data-bs-toggle="modal" data-bs-target="#exampleModalXp"><i
+            class="fas fa-trash"></i></button>
 
 </div>
 
@@ -64,10 +30,7 @@
             </div>
             <div class="row">
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(experiencia)"
-                        class="btn editar"><i class="fas fa-edit"></i></button>
-                    <!-- <button (click)="Listar()" class="btn btn-warning">Listar</button> -->
-                    <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn borrar"><i
-                            class="fas fa-trash"></i></button>
+                        class="btn editar"><i class="fas fa-hammer"></i></button>
                 </div>
             </div>
         </div>
@@ -75,6 +38,7 @@
 </div>
 
 
+<!-- Modal de eliminar Experiencias -->
 
 <div class="modal fade" id="exampleModalXp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -84,40 +48,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-footer" *ngFor="let experiencia of experiencias">
-                
-                    <h5>{{experiencia.nombre}}</h5>
-                
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn btn-warning borrar">Eliminar</button>
+                <h5>{{experiencia.nombre}}</h5>
+                <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn btn borrar">Eliminar</button>
+                <button type="button" class="btn btn" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-<!-- <div class="container-fluid">
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <h3>Experiencias</h3>
-                <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-secondary"><i class="far fa-plus-square"></i></button>
-            </div>
-        </div>
-        <span *ngFor="let experiencia of experiencias">
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    {{experiencia.nombre}}<br>{{experiencia.puesto}}<br>{{experiencia.fecha}}
-                </div>
-                <div class="col-lg-12">
-                    <button *ngIf="isAdmin" (click)="Editar(experiencia)" class="btn btn-warning"><i class="fas fa-edit"></i></button>
-                     <button (click)="Nuevo()" class="btn btn-warning">Nuevo</button> 
-                     <button (click)="Listar()" class="btn btn-warning">Listar</button> 
-                    <button *ngIf="isAdmin" (click)="Delete(experiencia)" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                </div>
-            </div>
-        </span>
-    </div> -->

@@ -25,7 +25,7 @@ export class SkillAddComponent implements OnInit {
   }
 
   Guardar() {
-    this.service.createSkill(this.skill).subscribe(data => {});
+    this.service.createSkill(this.skill).subscribe(data => {this.skill=data});
     this.router.navigate(['home']);
   }
 }

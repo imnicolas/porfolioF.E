@@ -1,39 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* .container {
-  width: 100%;
-  height: 100%;
-  border: solid 5px;
-  overflow: hidden;
-} */
-
-/* .container-fluid {
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  border-radius: 15px;
-  color: black;
-  padding: 10px;
-  margin-top: 1.5rem;
-} */
-
-
 
 .container {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   border-radius: 15px;
   margin-top: 1.5rem;
+  background-color:#a1ac88;
 }
 
 
-
-
-
-h1, h2, h3, h4, h5, p{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+h1,
+h2,
+h3,
+h5,
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 19px;
-  color:#fff;
+  color: #fff;
 }
+
+
 
 
 
@@ -43,22 +30,18 @@ h1, h2, h3, h4, h5, p{
   background-color: #a1ac88;
   padding-bottom: 15px;
   clip-path: polygon(0% 0%,
-  100% 0%,
-  100% calc(100% - 15px),
-  0% 100%
-  );
+      100% 0%,
+      100% calc(100% - 15px),
+      0% 100%);
 }
 
 
 body {
   background-color: #464d70;
-  margin: 15px;
 }
 
 
-
 /* BOTONES */
-
 
 
 .editar {
@@ -74,7 +57,6 @@ body {
 
 .agregar {
   size: 100vh;
-  color: red;
   border: solid 2px greenyellow;
   margin: 10px;
 }
@@ -82,8 +64,28 @@ body {
 /* BOTONES */
 
 
-
 label {
   font-size: 4vw;
 }
 
+
+/* MODAL SECCION ELIMINAR */
+.modal-header {
+  background-color: blue;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: between;
+  background-color: #61617a;
+}
+
+/* MODAL SECCION ELIMINAR */
+
+
+
+#logos {
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+  width: 100px;
+}

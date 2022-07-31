@@ -4,19 +4,17 @@
 
 
 <div *ngIf="isLogged; else loggedOut">
-    <h3 style="color: lightblue ;">
-        Hola {{nombreUsuario}}
-        <i class="far fa-thumbs-up"></i>
-    </h3>
+    <h4 style="color: lightblue ;">
+        <i class="far fa-handshake"></i> {{nombreUsuario}}
+    </h4>
 </div>
 
 
 
 <ng-template #loggedOut>
-    <h3 style="color: lightblue;">
-        No has iniciado sesion
-        <i class="far fa-thumbs-down"></i>
-    </h3>
+    <h4 style="color: lightblue;">
+        Inicia sesion <i class="fas fa-exclamation"></i>
+    </h4>
 </ng-template>
 
 
@@ -27,26 +25,17 @@
     <div class="row">
         <div class="col-12">
             <picture>
-                <img class="img-fluid" src="../../../assets/nicc2.jpg" alt="el baner de la pagina" id="baner">
+                <img class="img-fluid" src="../../../assets/nicc2.jpg" alt="no se muestra imagen banner" id="baner">
             </picture>
         </div>
-
-
         <div class="row" *ngFor="let persona of personas">
             <div class="col-8 d-flex justify-content-center">
                 <picture>
                     <img oncontextmenu="return false;" class="img-fluid rounded-circle" src="{{persona.img}}"
-                        alt="cargando imagen" id="perfil" />
+                        alt="no se muestra imagen de perfil" id="perfil" />
                 </picture>
             </div>
-
-            <div class="row">
-                <span class="d-flex justify-content-center"><button *ngIf="isAdmin" (click)="Editar(persona)"
-                        class="btn editar"><i class="fas fa-edit"></i>editar</button></span>
-            </div>
-
-            <h2 class="row d-flex justify-content-center">{{persona.nombre}} {{persona.apellido}}</h2>
-
+            <h4 class="row d-flex justify-content-center">{{persona.nombre}} {{persona.apellido}}</h4>
             <div class="col-4 datos">
                 <div style="margin: 20px;" class="row d-flex justify-content-center">
                     <h3>{{persona.titulo}}</h3>
@@ -56,12 +45,13 @@
                 </div>
             </div>
             <div style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                class="col-xl-4 col-lg-6 col-md-8 col-sm-8 col-10 datos">
+                class="col-xl-12 col-lg-6 col-md-8 col-sm-8 col-10 datos">
                 {{persona.hobbie}}
             </div>
-
+            <div class="col">
+                <button *ngIf="isAdmin" (click)="Editar(persona)" class="btn editar"><i
+                        class="fas fa-hammer"></i></button>
+            </div>
         </div>
-
     </div>
-
 </div>
