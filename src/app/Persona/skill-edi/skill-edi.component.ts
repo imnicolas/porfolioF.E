@@ -31,7 +31,6 @@ export class SkillEdiComponent implements OnInit {
     this.service.getSkillId(+id)
       .subscribe(data => {
         this.skill = data;
-        console.log(data);
       })
   }
 

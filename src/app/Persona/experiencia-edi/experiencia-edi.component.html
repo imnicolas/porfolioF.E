@@ -25,25 +25,31 @@
   </div> -->
 
 
-  <div class="container text-center d-flex justify-content-center">
-    <div class="row">
-      <div class="col">
-        <form action="">
-          <div class="row"><div class="form-group">
+<div class="container text-center d-flex justify-content-center">
+  <div class="row">
+    <div class="col">
+      <form action="">
+        <div class="row">
+          <div class="form-group">
             <label for="">Nombre:</label>
             <input [(ngModel)]="experiencia.nombre" name="nombre" type="text" class="form-control">
-          </div></div>
-          <div class="row"><div class="form-group">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
             <label for="">Apellido:</label>
             <input [(ngModel)]="experiencia.puesto" name="puesto" type="text" class="form-control">
-          </div></div>
-          <div class="row"><div class="form-group">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
             <label for="">Titulo:</label>
             <input [(ngModel)]="experiencia.fecha" name="fecha" type="text" class="form-control">
-          </div></div>
-          <button (click)="Actualizar(experiencia)" class="btn btn-danger">Actualizar</button>
-          <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
-        </form>
-      </div>
+          </div>
+        </div>
+        <button (click)="Actualizar(experiencia)" class="btn btn-danger">Actualizar</button>
+        <button (click)="Cancel()" class="btn btn-secondary">CANCELAR</button>
+      </form>
     </div>
   </div>
+</div>

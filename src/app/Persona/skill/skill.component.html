@@ -1,4 +1,4 @@
-<div class="container-fluid" id="skill" >
+<div class="container-fluid" id="skill">
     <div class="row">
         <div class="col-8 titulo">
             <h1>Tecnologías</h1>
@@ -12,7 +12,7 @@
 
 
 <footer>
-    <div *ngFor="let skill of skills" class="container">
+    <div *ngFor="let skill of skills" class="container skil">
         <span class="header text-center">
             <h4> {{skill.nombre}} </h4>
         </span>
@@ -27,8 +27,6 @@
             </picture>
             <p>{{skill.nivel}}</p>
             <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i class="fas fa-hammer"></i></button>
-        </span>
-        <span class="footer">
         </span>
     </div>
 </footer>

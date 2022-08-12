@@ -1,40 +1,36 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
   <div class="container-fluid">
     <picture>
-      <img class="img-fluid" style="max-width:15%;" src="../../../assets/APLogo.png" alt="Logo de AP" />
+      <img class="img-fluid" style="max-width:25%;" src="../../../assets/APLogo.png" alt="Logo de AP" />
     </picture>
-    <ul class="nav" id="links" >
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#estudio">Estudio</a>
+    <ul class="nav" id="links">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Menú
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#estudio">Estudio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experiencia">Experiencia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skill">Skill</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#proyecto">Proyecto</a>
+          </li>
+        </ul>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#experiencia">Experiencia</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#skill">Skill</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#proyecto">Proyecto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://discord.gg/xWy6K99P2T" style="color: gold ;"><i class="fab fa-discord"></i>
-          Discord</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="mailto:nicolas.esteban.suare@hotmail.es?Subject=Hola%20Nico%20que%20tal"
-          style="color: gold ;"><i class="fas fa-envelope"></i> Mail</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.linkedin.com/in/iamnicolas/" style="color: yellow ;"><i
-            class="fab fa-linkedin-in"></i>
-          Linked-in</a>
-      </li>
+
       <li class="nav-item" *ngIf="!isLogged">
         <a class="nav-link" routerLink="/login" style="cursor: pointer;color:#fff;"><i class="far fa-user"></i> Iniciar
           Sesión</a>
       </li>
       <li class="nav-item" *ngIf="isLogged" (click)="onLogOut()">
-        <a class="nav-link" style="cursor: pointer;color:#fff;"><i class="fas fa-door-open"></i> Cerrar Sesión</a>
+        <a class="nav-link" style="cursor: pointer;color:#fff;"><i class="fas fa-door-open"></i></a>
       </li>
     </ul>
   </div>

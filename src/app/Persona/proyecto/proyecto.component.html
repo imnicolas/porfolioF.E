@@ -1,4 +1,5 @@
-<div class="container-fluid" id="proyecto" >
+<div class="container-fluid" id="proyecto">
+
     <div class="row">
 
         <div class="col-8 titulo">
@@ -21,7 +22,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="card" *ngFor="let proyecto of proyectos">
+        <div class="card secciones" *ngFor="let proyecto of proyectos">
             <div class="col-xl-12 col-lg-6 col-sm-12">
                 <h4>{{proyecto.nombre}}</h4>
             </div>
@@ -32,7 +33,7 @@
                 <p>{{proyecto.desempenio}}</p>
             </div>
             <div class="col-xl-12 col-lg-6 col-sm-12">
-                <a class="nav-link" href="proyecto.url" ></a>
+                <a class="nav-link" href="proyecto.url"></a>
             </div>
             <div class="row">
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(proyecto)"

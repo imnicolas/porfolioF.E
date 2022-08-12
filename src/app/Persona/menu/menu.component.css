@@ -10,6 +10,12 @@
     }
 }
 
+@media(max-width:280){
+    #links{
+        display: none;
+    }
+}
+
 
 #links{
     display: flex;
