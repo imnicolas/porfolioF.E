@@ -21,10 +21,10 @@
 
 
     <div class="container-fluid d-flex text-center justify-content-center" style="margin: 10px;">
-        <span><a class="nav-link active" routerLink="/login">Iniciar
+        <span><a class="nav-link active" routerLink="/login" style="border-radius: 2px; border:solid 1px white;color:darkseagreen" >Iniciar
                 Sesión</a>
         </span>
-        <span><a class="nav-link" routerLink="/registro">Crear Cuenta</a>
+        <span><a class="nav-link" routerLink="/registro" style="color:darkseagreen" >Crear Cuenta</a>
         </span>
     </div>
 
@@ -50,13 +50,13 @@
                     </div>
                     <span style="margin: 10px;">
                         <div class="form-group">
-                            <button style="color: rgb(0, 0, 0);" class="btn btn-outline-success btn-block"
+                            <button style="color:darkseagreen;" class="btn btn-outline-success btn-block"
                                 [disabled]="!f.valid"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
-                                <button routerLink="/" class="btn btn">Cancelar</button>
+                                <button routerLink="/" class="btn btn" style="color:darkseagreen" >Cancelar</button>
                         </div>
                     </span>
                 </form>
-                <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3">Fail en el login:
+                <div *ngIf="f.submitted && isLoginFail" class="alert alert-danger mt-3 text-center">Fail en el login:
                     {{errMsj}}
                 </div>
             </div>

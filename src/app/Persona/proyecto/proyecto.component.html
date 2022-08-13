@@ -44,6 +44,7 @@
     </div>
 </div>
 
+<!-- Modal de eliminar Proyectos -->
 
 <div class="modal fade" id="exampleModalP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -54,9 +55,11 @@
             </div>
             <div class="modal-footer" *ngFor="let proyecto of proyectos">
                 <h5>{{proyecto.nombre}}</h5>
-                <button type="button" class="btn btn" data-bs-dismiss="modal">Cancelar</button>
                 <button *ngIf="isAdmin" (click)="Delete(proyecto)" class="btn btn borrar">Eliminar</button>
+                <button type="button" class="btn btn" data-bs-dismiss="modal">Cancelar</button>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Modal de eliminar Proyectos -->
