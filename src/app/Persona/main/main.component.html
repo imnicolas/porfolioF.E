@@ -12,7 +12,7 @@
 
 
 <ng-template #loggedOut>
-    <h4 style="color: lightblue;">
+    <h4 style="color: lightblue;" id="tostada" >
         Aún no has iniciado sesión
     </h4>
 </ng-template>
@@ -39,13 +39,13 @@
 
                 <h4>{{persona.nombre}} {{persona.apellido}}</h4>
 
-                <span>
+                
                     <button *ngIf="isAdmin" (click)="Editar(persona)"
-                        class="btn btn-outline-dark m-4 editar justify-content-center"><i
+                        class="btn btn-outline-dark d-flex justify-content-start m-4 editar"><i
                             class="fas fa-hammer"></i></button>
-                </span>
+               
 
-                <h3>{{persona.titulo}}</h3>
+                <h5>{{persona.titulo}}</h5>
 
                 <div class="row">
 

@@ -5,14 +5,15 @@
         <div class="col-8 titulo">
             <h3>PROYECTOS</h3>
         </div>
-
-        <div class="col-4 justify-content-center">
-            <button *ngIf="isAdmin" (click)="Nuevo()" class="btn agregar"><i class="far fa-plus-square"></i></button>
-        </div>
-
     </div>
-    <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalP" class="btn borrar"><i
-            class="fas fa-trash"></i></button>
+
+    <span class="container d-flex justify-content-between">
+        <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalP" class="btn btn-outline borrar"><i
+                class="fas fa-trash"></i></button>
+
+        <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-outline agregar"><i
+                class="far fa-plus-square"></i></button>
+    </span>
 
 </div>
 

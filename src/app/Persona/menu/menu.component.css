@@ -10,17 +10,44 @@
     }
 }
 
-@media(max-width:280){
+@media(max-width:280px){
     #links{
         display: none;
     }
 }
+
+@media(max-width:280px)
+{
+    #ap
+    {
+        display: none;
+    }
+}
+
+@media(max-width:280px)
+{
+    #sociales
+    {
+        display: none;
+    }
+}
+
+
+@media(max-width:280px)
+{
+    #navbarDropdownMenuLink
+    {
+        display: none;
+    }
+}
+
 
 
 #links{
     display: flex;
     justify-content: space-between;
 }
+
 
 
 /* Redes Sociales */

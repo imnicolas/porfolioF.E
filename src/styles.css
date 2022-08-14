@@ -20,7 +20,11 @@
 body 
 {
   background-color: #464d70;
-  background-image: url(/src/assets/hojas2.jpg);
+}
+
+h3,h2,h1
+{
+  color:#F5BA33;
 }
 
 
@@ -36,9 +40,7 @@ body
 .borrar 
 {
   color: #fff;
-  border: solid 1px blue;
-  background-color: #401c2a;
-  margin-left: 4rem;
+  border: solid 1px #AF36FF;
 }
 
 .agregar 
@@ -60,14 +62,14 @@ label
 /* MODAL SECCION ELIMINAR */
 .modal-header 
 {
-  background-color: blue;
+  background-color: #AF36FF;
 }
 
 .modal-footer 
 {
   display: flex;
   justify-content: between;
-  background-color: #61617a;
+  background-color: #FF7836;
 }
 
 /* MODAL SECCION ELIMINAR */
