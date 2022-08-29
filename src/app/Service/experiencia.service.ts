@@ -9,7 +9,7 @@ export class ExperienciaService {
   constructor(private http:HttpClient) {}
     
   URL='http://localhost:8080/experiencias';
-  Url='https://porfolioargentino.herokuapp.com/experiencias';
+  Url='https://porfolioarg.herokuapp.com/experiencias';
 
   getExperiencia(){
     return this.http.get<Experiencia[]>(this.Url+'/traer');

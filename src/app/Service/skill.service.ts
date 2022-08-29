@@ -9,7 +9,7 @@ export class SkillService {
   constructor(private http:HttpClient) {}
     
   URL='http://localhost:8080/skills';
-  Url='https://porfolioargentino.herokuapp.com/skills';
+  Url='https://porfolioarg.herokuapp.com/skills';
 
   getSkill(){
     return this.http.get<Skill[]>(this.Url+'/traer');
