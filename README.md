@@ -1,27 +1,25 @@
-# Nicolas Esteban Suarez
+# Bienvenidos a mi porfolio ✔
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Estas por hacer un fork del proyecto porfolio? El primer paso despues de descargar los archivos es usar el comando **npm install** para poder instalar todos los modules para que ande de forma correcta el proyecto✨
 
-## Development server
+El proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) la version 13.3.0.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## D.E.R ( Diagrama de entidad relacion)
 
-## Code scaffolding
+![](/src/assets/diagrama.png)
+**La DB está hecha desde netbeans (Java) y solo se uso la cardinalidad para las tablas Usuario y Rol ( Login ). El resto de tablas no tienen relación entre ellas, quiero decir es una base de datos en su mayor parte NoSQL**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Pruebas API RestFull URL [backEnd desplegado](https://porfolioarg.herokuapp.com/)
 
-## Build
+**EndPoints ( Ahora dejo los distintos endPoints)**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Lo siguiente trae una **Lista** de Personas (@GetRequest)
+/personas/traer
+## Lo siguiene **trae** una Persona por **Id** (@GetRequest)
+/personas/traer/1
+## Lo siguiente **edita** una Persona por **Id** (@PutMapping)
+/personas/editar/1
+## Lo siguiente **crea** una Persona (@PostMapping)
+/personas/crear
+## Lo siguiente **elimina** una Persona por **Id** (@DeleteMaping)
+/personas/borrar/1
