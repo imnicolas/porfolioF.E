@@ -8,8 +8,8 @@ import { Skill } from '../Persona/modelo/skill';
 export class SkillService {
   constructor(private http:HttpClient) {}
     
-  Url='http://localhost:8080/skills';
-  URL='https://porfolioargentino.herokuapp.com/skills';
+  URL='http://localhost:8080/skills';
+  Url='https://porfolioargentino.herokuapp.com/skills';
 
   getSkill(){
     return this.http.get<Skill[]>(this.Url+'/traer');

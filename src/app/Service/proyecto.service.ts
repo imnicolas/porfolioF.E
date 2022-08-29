@@ -9,8 +9,8 @@ export class ProyectoService {
 
   constructor(private http:HttpClient) {}
     
-  Url='http://localhost:8080/proyectos';
-  URL='https://porfolioargentino.herokuapp.com/proyectos';
+  URL='http://localhost:8080/proyectos';
+  Url='https://porfolioargentino.herokuapp.com/proyectos';
 
   getProyecto(){
     return this.http.get<Proyecto[]>(this.Url+'/traer');

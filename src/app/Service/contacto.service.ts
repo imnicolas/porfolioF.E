@@ -8,8 +8,8 @@ import { Contacto } from '../Persona/modelo/contacto';
 export class ContactoService {
   constructor(private http:HttpClient) {}
     
-  Url='http://localhost:8080/contactos';
-  URL='https://porfolioargentino.herokuapp.com/contactos';
+  URL='http://localhost:8080/contactos';
+  Url='https://porfolioargentino.herokuapp.com/contactos';
 
   getContacto(){
     return this.http.get<Contacto[]>(this.Url+'/traer');
