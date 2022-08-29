@@ -25,6 +25,10 @@ body
 h3,h2,h1
 {
   color:#F5BA33;
+  border:solid 0.5px #AF36FF;
+  border-radius: 20px;
+  filter: brightness(2);
+  margin: 5px;
 }
 
 
@@ -35,12 +39,14 @@ h3,h2,h1
 .editar 
 {
   border: solid 1px #fff;
+  margin: 5px;
 }
 
 .borrar 
 {
   color: #fff;
   border: solid 1px #AF36FF;
+  filter: brightness(3);
 }
 
 .agregar 
@@ -48,6 +54,7 @@ h3,h2,h1
   size: 100vh;
   border: solid 2px greenyellow;
   margin: 10px;
+  filter: brightness(1);
 }
 
 /* BOTONES */

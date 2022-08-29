@@ -46,4 +46,5 @@
 {
     border: solid 1px #AF36FF;
     box-shadow:0 0 45px;
+    filter: brightness(1.5);
 }

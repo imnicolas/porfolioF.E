@@ -4,7 +4,7 @@
 
 
 <div class="text-center" *ngIf="isLogged; else loggedOut">
-    <h4 style="margin: 1em;color:white">
+    <h4 style="margin: 1em;color:#F5BA33;filter: brightness(2);">
         <i class="far fa-handshake"></i> {{nombreUsuario}}
     </h4>
 </div>
@@ -12,7 +12,7 @@
 
 
 <ng-template #loggedOut>
-    <h4 style="color: lightblue;" id="tostada" >
+    <h4 style="color:#F5BA33;filter: brightness(2);margin: 20px; " id="tostada" >
         Aún no has iniciado sesión
     </h4>
 </ng-template>
@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-12 ">
             <picture>
-                <img class="img-fluid w-100" src="../../../assets/nicc2.jpg" alt="no se muestra imagen banner"
+                <img class="img-fluid w-100" src="../../../assets/nicc2.webp" alt="no se muestra imagen banner"
                     id="baner" />
             </picture>
         </div>

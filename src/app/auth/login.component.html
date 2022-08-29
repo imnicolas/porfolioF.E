@@ -4,9 +4,8 @@
 
 <span *ngIf="isLogged; else loggedOut"></span>
 
-<ng-template #loggedOut>
 
-    <!-- <div class="container d-flex justify-content-center">
+<!-- <div class="container d-flex justify-content-center">
         <div class="card">
             <div class="card-header">
                 <ul class="nav nav-tabs">
@@ -19,7 +18,8 @@
                 </ul>
             </div> -->
 
-
+            
+            <ng-template #loggedOut>
     <div class="container-fluid d-flex text-center justify-content-center" style="margin: 10px;">
         <span><a class="nav-link active" routerLink="/login" style="border-radius: 2px; border:solid 1px white;color:darkseagreen" >Iniciar
                 Sesión</a>
