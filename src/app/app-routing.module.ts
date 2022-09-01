@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'edit', component:EdiComponent, canActivate: [guard], data: {expectedRol:['admin']}},
   {path:'addP',component:ProyectoAddComponent, canActivate: [guard], data: {expectedRol:['admin']}},
   {path:'editP',component:ProyectoEdiComponent, canActivate: [guard], data: {expectedRol:['admin']}},
-  {path:'home',component:NadaComponent, canActivate: [guard], data: {expectedRol:['admin', 'user']}},
+  {path:'home',component:NadaComponent},
   {path:'editExp',component:ExperienciaEdiComponent, canActivate: [guard], data: {expectedRol:['admin']}},
   {path:'addExp',component:ExperienciaAddComponent, canActivate: [guard], data: {expectedRol:['admin']}},
   {path:'editS',component:SkillEdiComponent, canActivate: [guard], data: {expectedRol:['admin']}},
