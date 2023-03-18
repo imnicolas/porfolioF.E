@@ -10,7 +10,7 @@ export class ServiceService {
   constructor(private http:HttpClient) {}
     
     URL='http://localhost:8080/personas';
-    Url='https://porfolioarg.herokuapp.com/personas';
+    Url='https://suareznicolas.onrender.com/personas';
 
     getPersona(){
       return this.http.get<Persona[]>(this.Url+'/traer');

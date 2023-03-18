@@ -9,7 +9,7 @@ export class ContactoService {
   constructor(private http:HttpClient) {}
     
   URL='http://localhost:8080/contactos';
-  Url='https://porfolioarg.herokuapp.com/contactos';
+  Url='https://suareznicolas.onrender.com/contactos';
 
   getContacto(){
     return this.http.get<Contacto[]>(this.Url+'/traer');

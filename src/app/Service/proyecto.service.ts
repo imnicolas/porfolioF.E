@@ -10,7 +10,7 @@ export class ProyectoService {
   constructor(private http:HttpClient) {}
     
   URL='http://localhost:8080/proyectos';
-  Url='https://porfolioarg.herokuapp.com/proyectos';
+  Url='https://suareznicolas.onrender.com/proyectos';
 
   getProyecto(){
     return this.http.get<Proyecto[]>(this.Url+'/traer');
