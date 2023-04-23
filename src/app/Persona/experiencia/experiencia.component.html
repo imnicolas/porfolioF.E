@@ -1,32 +1,31 @@
 <div class="container-fluid" id="experiencia">
     <div class="row">
-
-        <div class="col-8 titulo">
-            <h2>Experiencias</h2>
+        <div class="col-6 titulo">
+            <h3>EXPERIENCIAS LABORALES <i class="fa-solid fa-person-digging"></i></h3>
         </div>
     </div>
     <span class="container d-flex justify-content-between">
-        <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalXp" class="btn btn-outline borrar"><i
-                class="fas fa-trash"></i></button>
-
+        <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalXp"
+            class="btn btn-outline borrar"><i class="fas fa-trash"></i></button>
         <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-outline agregar"><i
                 class="far fa-plus-square"></i></button>
     </span>
 </div>
-
-
 <div class="container">
     <div class="row">
         <div *ngFor="let experiencia of experiencias" class="card secciones">
             <div class="col-xl-12 col-lg-6 col-sm-12">
-                <h4>{{experiencia.nombre}}</h4>
+                <h3>{{experiencia.nombre}}</h3>
+                <h5>{{experiencia.puesto}}</h5>
+                <p>{{experiencia.fecha}}</p>
             </div>
-            <div class="col-xl-12 col-lg-6 col-sm-12">
-                <p>{{experiencia.puesto}}</p>
+            <!-- <div class="col-xl-12 col-lg-6 col-sm-12">
+                <h5>{{experiencia.puesto}}</h5>
+                <p>{{experiencia.fecha}}</p>
             </div>
             <div class="col-xl-12 col-lg-6 col-sm-12">
                 <p>{{experiencia.fecha}}</p>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(experiencia)"
                         class="btn editar"><i class="fas fa-hammer"></i></button>
@@ -35,10 +34,7 @@
         </div>
     </div>
 </div>
-
-
 <!-- Modal de eliminar Experiencias -->
-
 <div class="modal fade" id="exampleModalXp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -54,5 +50,4 @@
         </div>
     </div>
 </div>
-
 <!-- Modal de eliminar Experiencias -->

@@ -4,22 +4,24 @@ import { Observable } from 'rxjs';
 import { JwtDTO } from '../Persona/modelo/jwt-DTO';
 import { LoginUsuario } from '../Persona/modelo/login-usuario';
 import { NuevoUsuario } from '../Persona/modelo/nuevo-usuario';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  authUrl = 'http://localhost:8080/auth';
-  authURL = 'https://suareznicolas.onrender.com/auth'
+  //'http://localhost:8080/auth';
+  //'https://suareznicolas.onrender.com/auth'
+  authURL = environment.authUrl;
 
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.authURL + '/nuevo', nuevoUsuario);
+    return this.httpClient.post<any>(this.authURL + 'auth/nuevo', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDTO>{
-    return this.httpClient.post<JwtDTO>(this.authURL + '/login', loginUsuario);
+    return this.httpClient.post<JwtDTO>(this.authURL + 'auth/login', loginUsuario);
   }
 }

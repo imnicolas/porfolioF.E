@@ -4,58 +4,44 @@
     }
 }
 
-@media(max-width:353px){
-    .bienvenido{
+@media(max-width:353px) {
+    .bienvenido {
         display: none;
     }
 }
 
-@media(max-width:280px){
-    #links{
+@media(max-width:280px) {
+    #links {
         display: none;
     }
 }
 
-@media(max-width:280px)
-{
-    #ap
-    {
+@media(max-width:280px) {
+    #ap {
         display: none;
     }
 }
 
-@media(max-width:280px)
-{
-    #sociales
-    {
+@media(max-width:280px) {
+    #sociales {
         display: none;
     }
 }
 
 
-@media(max-width:280px)
-{
-    #navbarDropdownMenuLink
-    {
+@media(max-width:280px) {
+    #navbarDropdownMenuLink {
         display: none;
     }
 }
 
 
 
-#links{
+#links {
     display: flex;
     justify-content: space-between;
 }
 
-
-#ap 
-{
-    max-width: 250px;
-    max-height: 150px;
-}
-
-#server
-{
+#server {
     max-width: 150px;
 }

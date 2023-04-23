@@ -1,32 +1,32 @@
 <div class="container-fluid" id="estudio">
     <div class="row">
-        <div class="col-8 titulo">
-            <h1>Estudios</h1>
+        <div class="col-5 titulo">
+            <h3>ESTUDIOS <i class="fa-solid fa-graduation-cap"></i></h3>
         </div>
     </div>
     <span class="container d-flex justify-content-between">
-        <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalEstudio" class="btn btn-outline borrar"><i
-                class="fas fa-trash"></i></button>
+        <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalEstudio"
+            class="btn btn-outline borrar"><i class="fas fa-trash"></i></button>
 
         <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-outline agregar"><i
                 class="far fa-plus-square"></i></button>
     </span>
 </div>
-
-
-
 <div class="container">
     <div class="row">
         <div *ngFor="let estudio of estudios" class="card secciones">
             <div class="col-xl-12 col-lg-6 col-sm-12">
-                <h4>{{estudio.establecimiento}}</h4>
+                <h3>{{estudio.establecimiento}}</h3>
+                <h5>{{estudio.logro}}</h5>
+                <p>{{estudio.fecha}}</p>
             </div>
-            <div class="col-xl-12 col-lg-6 col-sm-12">
+            <!-- <div class="col-xl-12 col-lg-6 col-sm-12">
                 <p>{{estudio.logro}}</p>
+                <p>{{estudio.fecha}}</p>
             </div>
             <div class="col-xl-12 col-lg-6 col-sm-12">
                 <p>{{estudio.fecha}}</p>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-xl-2 col-lg-6 col-sm-12"><button *ngIf="isAdmin" (click)="Editar(estudio)"
                         class="btn editar"><i class="fas fa-hammer"></i></button>

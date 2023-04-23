@@ -1,44 +1,36 @@
 <div class="container-fluid" id="skill">
     <div class="row">
-        <div class="col-8 titulo">
-            <h1>Tecnologías</h1>
+        <div class="col-6 titulo">
+            <h3>TECNOLOGIAS y Herramientas <i class="fa-solid fa-screwdriver-wrench"></i></h3>
         </div>
     </div>
     <span class="container d-flex justify-content-between">
         <button *ngIf="isAdmin" data-bs-toggle="modal" data-bs-target="#exampleModalSkill"
             class="btn btn-outline borrar"><i class="fas fa-trash"></i></button>
-
         <button *ngIf="isAdmin" (click)="Nuevo()" class="btn btn-outline agregar"><i
                 class="far fa-plus-square"></i></button>
     </span>
 </div>
-
-
-<div class="row skil">
-    <div *ngFor="let skill of skills" class="container col-xl-3 col-lg-4 col-sm-6">
-
-        <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i class="fas fa-hammer"></i></button>
-        <h4 class="header text-center"> {{skill.nombre}} </h4>
-        <span>
-            <p>{{skill.nivel}}</p>
-        </span>
-        <div class="progress body">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-                aria-valuemin="0" aria-valuemax="100" attr.style="width:{{skill.progress}}%">
+<div class="container-fluid d-flex justify-content-between herramientas">
+    <div class="row">
+        <div class="col" *ngFor="let skill of skills">
+            <button *ngIf="isAdmin" (click)="Editar(skill)" class="btn editar"><i class="fas fa-hammer"></i></button>
+            <!-- <h2 class="header text-center"> {{skill.nombre}} </h2> -->
+            <span>
+                {{skill.nivel}}
+            </span>
+            <picture>
+                <img src="{{skill.img}}" alt="Logos de Skills" id="logos" accept="image/*" />
+            </picture>
+            <div class="progress body">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" attr.style="width:{{skill.progress}}%">
+                </div>
             </div>
         </div>
-
-        <picture>
-            <img src="{{skill.img}}" alt="Logos de Skills" id="logos" accept="image/*" />
-        </picture>
-
-
     </div>
 </div>
-
-
-
-
+<!-- modal para borrar / editar -->
 <div class="modal fade" id="exampleModalSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -58,7 +50,5 @@
     </div>
 </div>
 
-
-<!-- Breakpoints
-    
+<!-- Breakpoints    
  col-xl-4 col-lg-4 col-md-6 col-sm-12 mx-2 my-2 -->

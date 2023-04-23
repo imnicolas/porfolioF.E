@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Experiencia } from '../Persona/modelo/experiencia';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,22 +9,21 @@ import { Experiencia } from '../Persona/modelo/experiencia';
 export class ExperienciaService {
   constructor(private http:HttpClient) {}
     
-  URL='http://localhost:8080/experiencias';
-  Url='https://suareznicolas.onrender.com/experiencias';
+  authURL = environment.authUrl;
 
   getExperiencia(){
-    return this.http.get<Experiencia[]>(this.Url+'/traer');
+    return this.http.get<Experiencia[]>(this.authURL+'experiencias/traer');
 }
 createExperiencia(experiencia:Experiencia){
-  return this.http.post<Experiencia>(this.Url+'/crear',experiencia);
+  return this.http.post<Experiencia>(this.authURL+'experiencias/crear',experiencia);
 }
 getExperienciaId(id:number){
-  return this.http.get<Experiencia>(this.Url+"/"+id);
+  return this.http.get<Experiencia>(this.authURL+"experiencias/"+id);
 }
 updateExperiencia(experiencia:Experiencia){
-  return this.http.put<Experiencia>(this.Url+"/editar/"+experiencia.id,experiencia);
+  return this.http.put<Experiencia>(this.authURL+"experiencias/editar/"+experiencia.id,experiencia);
 }
 deleteExperiencia(experiencia:Experiencia){
-  return this.http.delete<Experiencia>(this.Url+"/borrar/"+experiencia.id);
+  return this.http.delete<Experiencia>(this.authURL+"experiencias/borrar/"+experiencia.id);
 }
 }

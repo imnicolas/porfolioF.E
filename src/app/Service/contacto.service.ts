@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Contacto } from '../Persona/modelo/contacto';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,22 +9,21 @@ import { Contacto } from '../Persona/modelo/contacto';
 export class ContactoService {
   constructor(private http:HttpClient) {}
     
-  URL='http://localhost:8080/contactos';
-  Url='https://suareznicolas.onrender.com/contactos';
+  authURL = environment.authUrl;
 
   getContacto(){
-    return this.http.get<Contacto[]>(this.Url+'/traer');
+    return this.http.get<Contacto[]>(this.authURL+'contactos/traer');
 }
 createContacto(contacto:Contacto){
-  return this.http.post<Contacto>(this.Url+'/crear',contacto);
+  return this.http.post<Contacto>(this.authURL+'contactos/crear',contacto);
 }
 getContactoId(id:number){
-  return this.http.get<Contacto>(this.Url+"/"+id);
+  return this.http.get<Contacto>(this.authURL+"contactos/"+id);
 }
 updateContacto(contacto:Contacto){
-  return this.http.put<Contacto>(this.Url+"/editar/"+contacto.id,contacto);
+  return this.http.put<Contacto>(this.authURL+"contactos/editar/"+contacto.id,contacto);
 }
 deleteContacto(contacto:Contacto){
-  return this.http.delete<Contacto>(this.Url+"/borrar/"+contacto.id);
+  return this.http.delete<Contacto>(this.authURL+"contactos/borrar/"+contacto.id);
 }
 }

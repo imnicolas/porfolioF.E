@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Skill } from '../Persona/modelo/skill';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,22 +9,21 @@ import { Skill } from '../Persona/modelo/skill';
 export class SkillService {
   constructor(private http:HttpClient) {}
     
-  URL='http://localhost:8080/skills';
-  Url='https://suareznicolas.onrender.com/skills';
+  authURL = environment.authUrl;
 
   getSkill(){
-    return this.http.get<Skill[]>(this.Url+'/traer');
+    return this.http.get<Skill[]>(this.authURL+'skills/traer');
 }
 createSkill(skill:Skill){
-  return this.http.post<Skill>(this.Url+'/crear',skill);
+  return this.http.post<Skill>(this.authURL+'skills/crear',skill);
 }
 getSkillId(id:number){
-  return this.http.get<Skill>(this.Url+"/"+id);
+  return this.http.get<Skill>(this.authURL+"skills/"+id);
 }
 updateSkill(skill:Skill){
-  return this.http.put<Skill>(this.Url+"/editar/"+skill.id,skill);
+  return this.http.put<Skill>(this.authURL+"skills/editar/"+skill.id,skill);
 }
 deleteSkill(skill:Skill){
-  return this.http.delete<Skill>(this.Url+"/borrar/"+skill.id);
+  return this.http.delete<Skill>(this.authURL+"skills/borrar/"+skill.id);
 }
 }

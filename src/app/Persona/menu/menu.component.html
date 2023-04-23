@@ -1,36 +1,36 @@
 <nav class="navbar navbar-expand-lg navbar-dark mb-4">
   <div class="container-fluid">
     <picture>
-      <img class="img-fluid" src="../../../assets/APLogo.png" alt="Logo de AP" id="ap" />
-      <img class="img-fluid" src="../../../assets/Mi proyecto.png" alt="Logo de AP" id="server"  />
+      <a href="https://discord.gg/argentinadeveloper"><img class="img-fluid" src="../../../assets/Mi proyecto.png"
+          alt="Logo de AP" id="server" /></a>
     </picture>
-    <code style="color: #2ff;" >Bienvenidos a mi porfolio</code>
+    <code style="color: #C98025; font-size: 3vh;">Bienvenidos a mi porfolio</code>
 
     <ul class="nav" id="links">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false" style="color:darkseagreen">
+          aria-expanded="false" style="color:#C98025; font-size: 2.2vh;">
           Menú
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #E7C5B1;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#estudio">Estudio</a>
+            <a class="nav-link active" aria-current="page" href="#estudio" style="color: #C6480D;">Estudio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experiencia">Experiencia</a>
+            <a class="nav-link" href="#experiencia" style="color: #C6480D;">Experiencia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skill">Skill</a>
+            <a class="nav-link" href="#skill" style="color: #C6480D;">Skill</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#proyecto">Proyecto</a>
+            <a class="nav-link" href="#proyecto" style="color: #C6480D;">Proyecto</a>
           </li>
         </ul>
       </li>
 
       <li class="nav-item" *ngIf="!isLogged">
         <a class="nav-link" routerLink="/login"
-          style="cursor: pointer;color:#fff;border: solid 1px white;border-radius: 5px;"><i class="far fa-user"></i>
+          style="cursor: pointer;color:#E7C5B1;border: solid 1px white;border-radius: 5px;"><i class="far fa-user"></i>
           Iniciar
           Sesión</a>
       </li>
